@@ -1,5 +1,21 @@
 <resources>
     <string name="app_name">maxApp</string>
 
+    <string name="clients">Clientes</string>
+    <string name="orders">Pedidos</string>
+    <string name="sales_summary">Resumo de vendas</string>
+    <string name="tools">Ferramentas</string>
+
     <string name="app_version">v.%1$s</string>
+
+    <string name="data">Dados</string>
+    <string name="orderHistory">Hist. de pedidos</string>
+    <string name="license">Alvarás</string>
+
+    <string name="client_data">Dados do cliente</string>
+    <string name="contacts">Contatos</string>
+    <string name="verify_client_status">Verificar status do cliente</string>
+
+    <string name="empty_view_title">Nada encontrado…</string>
+    <string name="empty_view_subtitle">"Não há alvarás para exibir,\nverifique com o responsável pelo ERP</string>
 </resources>

@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">maxapp</string>
+    <string name="app_name">maxApp</string>
+
+    <string name="app_version">v.%1$s</string>
 </resources>

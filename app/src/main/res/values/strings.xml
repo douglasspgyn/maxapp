@@ -16,6 +16,30 @@
     <string name="contacts">Contatos</string>
     <string name="verify_client_status">Verificar status do cliente</string>
 
+    <string name="search">Pesquisar</string>
+    <string name="subtitles">Legendas</string>
+    <string name="order_state_on_erp">Status do pedido no ERP</string>
+    <string name="in_processing_by_fv">Em processamento por parte do FV</string>
+    <string name="refused_by_erp">Pedido recusado pelo ERP</string>
+    <string name="pendent_on_erp">Posição no ERP Pendente</string>
+    <string name="blocked_on_erp">Posição no ERP Bloqueado</string>
+    <string name="released_on_erp">Posição no ERP Liberado</string>
+    <string name="mounted_on_erp">Posição no ERP Montado</string>
+    <string name="billed_on_erp">Posição no ERP Faturado</string>
+    <string name="canceled_on_erp">Posição no ERP Cancelado</string>
+    <string name="budget">Orçamento</string>
+    <string name="review">Crítica</string>
+    <string name="waiting_erp">Aguardando retorno do ERP</string>
+    <string name="success">Sucesso</string>
+    <string name="partial_failure">Falha parcial</string>
+    <string name="total_failure">Falha total</string>
+    <string name="order_was_cutted">Pedido sofreu corte</string>
+    <string name="order_missing">Pedido com falta</string>
+    <string name="order_canceled_on_erp">Pedido cancelado no ERP</string>
+    <string name="order_with_return">Pedido com devolução</string>
+    <string name="order_from_telemarketing">Pedido feito pelo Telemarketing</string>
+    <string name="close">Fechar</string>
+
     <string name="empty_view_title">Nada encontrado…</string>
     <string name="empty_view_subtitle">"Não há alvarás para exibir,\nverifique com o responsável pelo ERP</string>
 </resources>

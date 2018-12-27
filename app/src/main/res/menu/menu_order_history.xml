@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.client.ClientActivity">
+
+    <item
+        android:id="@+id/menuSubtitles"
+        android:icon="@drawable/ic_legenda_campanha"
+        android:title="@string/subtitles"
+        app:showAsAction="never" />
+</menu>

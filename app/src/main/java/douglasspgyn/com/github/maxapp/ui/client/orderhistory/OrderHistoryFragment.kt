@@ -5,12 +5,20 @@ import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.SearchView
 import android.view.*
 import douglasspgyn.com.github.maxapp.R
+import douglasspgyn.com.github.maxapp.common.adapter.OrderHistoryAdapter
+import douglasspgyn.com.github.maxapp.common.extension.gone
+import douglasspgyn.com.github.maxapp.common.extension.visible
+import douglasspgyn.com.github.maxapp.model.Pedido
+import kotlinx.android.synthetic.main.fragment_order_history.*
 
+class OrderHistoryFragment : Fragment(), OrderHistoryContract.View,
+        SearchView.OnQueryTextListener {
 
-class OrderHistoryFragment : Fragment(), SearchView.OnQueryTextListener {
+    private val presenter: OrderHistoryPresenter = OrderHistoryPresenter(this)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_order_history, container, false)
@@ -22,6 +30,12 @@ class OrderHistoryFragment : Fragment(), SearchView.OnQueryTextListener {
         setHasOptionsMenu(true)
 
         activity?.title = "Hist. de pedidos"
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        presenter.getOrderHistory()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
@@ -57,10 +71,47 @@ class OrderHistoryFragment : Fragment(), SearchView.OnQueryTextListener {
     }
 
     override fun onQueryTextSubmit(text: String?): Boolean {
+        text?.let {
+            if (it.trim().isNotEmpty()) {
+                presenter.filterOrderHistory(it)
+            }
+        }
+
         return true
     }
 
     override fun onQueryTextChange(text: String?): Boolean {
         return true
+    }
+
+    override fun showLoading() {
+        loading.visible()
+    }
+
+    override fun hideLoading() {
+        loading.gone()
+    }
+
+    override fun orderHistoryLoaded(orders: List<Pedido>) {
+        recyclerView.let {
+            it.layoutManager = LinearLayoutManager(context)
+            it.adapter = OrderHistoryAdapter(orders)
+        }
+    }
+
+    override fun orderHistoryLoadedEmpty() {
+
+    }
+
+    override fun orderHistoryFailed(e: Throwable) {
+
+    }
+
+    override fun filteredOrderHistory(orders: List<Pedido>) {
+
+    }
+
+    override fun filteredOrderHistoryEmpty() {
+
     }
 }

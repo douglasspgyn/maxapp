@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import douglasspgyn.com.github.maxapp.R
-import douglasspgyn.com.github.maxapp.extension.isNetworkConnected
+import douglasspgyn.com.github.maxapp.common.extension.isNetworkConnected
 import douglasspgyn.com.github.maxapp.ui.client.ClientActivity
 import kotlinx.android.synthetic.main.activity_main.*
 

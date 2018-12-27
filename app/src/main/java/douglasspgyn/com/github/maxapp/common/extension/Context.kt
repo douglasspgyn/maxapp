@@ -1,4 +1,4 @@
-package douglasspgyn.com.github.maxapp.extension
+package douglasspgyn.com.github.maxapp.common.extension
 
 import android.content.Context
 import android.net.ConnectivityManager

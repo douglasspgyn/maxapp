@@ -9,7 +9,7 @@
     <string name="app_version">v.%1$s</string>
 
     <string name="data">Dados</string>
-    <string name="orderHistory">Hist. de pedidos</string>
+    <string name="order_history">Hist. de pedidos</string>
     <string name="license">Alvarás</string>
 
     <string name="client_data">Dados do cliente</string>

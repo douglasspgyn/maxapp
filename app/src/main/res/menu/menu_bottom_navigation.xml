@@ -10,7 +10,7 @@
     <item
         android:id="@+id/menuOrderHistory"
         android:icon="@drawable/ic_maxima_historico_pedidos_ativo"
-        android:title="@string/orderHistory"
+        android:title="@string/order_history"
         app:showAsAction="ifRoom" />
 
     <item

@@ -29,7 +29,7 @@ class OrderHistoryFragment : Fragment(), OrderHistoryContract.View,
 
         setHasOptionsMenu(true)
 
-        activity?.title = "Hist. de pedidos"
+        activity?.title = getString(R.string.order_history)
     }
 
     override fun onResume() {

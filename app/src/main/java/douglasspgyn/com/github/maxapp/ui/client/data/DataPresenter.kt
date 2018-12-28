@@ -2,13 +2,14 @@ package douglasspgyn.com.github.maxapp.ui.client.data
 
 import douglasspgyn.com.github.maxapp.business.ClientBusiness
 import douglasspgyn.com.github.maxapp.common.extension.rx
+import douglasspgyn.com.github.maxapp.ui.base.BasePresenter
 
-class DataPresenter(private val view: DataContract.View) : DataContract.Presenter {
+class DataPresenter(private val view: DataContract.View) : DataContract.Presenter, BasePresenter() {
 
     override fun getClient() {
         view.showLoading()
 
-        ClientBusiness().getCliente()
+        disposable.add(ClientBusiness().getCliente()
                 .rx({
                     view.clientLoaded(it)
                 }, {
@@ -16,5 +17,6 @@ class DataPresenter(private val view: DataContract.View) : DataContract.Presente
                 }, {
                     view.hideLoading()
                 })
+        )
     }
 }

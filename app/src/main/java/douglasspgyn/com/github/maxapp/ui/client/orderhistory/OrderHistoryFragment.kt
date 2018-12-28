@@ -4,7 +4,6 @@ import android.app.AlertDialog
 import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.SearchView
 import android.view.*
@@ -14,12 +13,13 @@ import douglasspgyn.com.github.maxapp.common.adapter.OrderHistoryAdapter
 import douglasspgyn.com.github.maxapp.common.extension.gone
 import douglasspgyn.com.github.maxapp.common.extension.visible
 import douglasspgyn.com.github.maxapp.model.Pedido
+import douglasspgyn.com.github.maxapp.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_order_history.*
 
-class OrderHistoryFragment : Fragment(), OrderHistoryContract.View,
+class OrderHistoryFragment : BaseFragment<OrderHistoryPresenter>(), OrderHistoryContract.View,
         SearchView.OnQueryTextListener {
 
-    private val presenter: OrderHistoryPresenter = OrderHistoryPresenter(this)
+    override fun viewPresenter(): OrderHistoryPresenter = OrderHistoryPresenter(this)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_order_history, container, false)

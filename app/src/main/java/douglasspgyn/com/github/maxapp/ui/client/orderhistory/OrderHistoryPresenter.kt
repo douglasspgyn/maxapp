@@ -3,15 +3,16 @@ package douglasspgyn.com.github.maxapp.ui.client.orderhistory
 import douglasspgyn.com.github.maxapp.business.OrderBusiness
 import douglasspgyn.com.github.maxapp.common.extension.rx
 import douglasspgyn.com.github.maxapp.model.Pedido
+import douglasspgyn.com.github.maxapp.ui.base.BasePresenter
 
-class OrderHistoryPresenter(val view: OrderHistoryContract.View) : OrderHistoryContract.Presenter {
+class OrderHistoryPresenter(val view: OrderHistoryContract.View) : OrderHistoryContract.Presenter, BasePresenter() {
 
     private var orders: List<Pedido> = mutableListOf()
 
     override fun getOrderHistory() {
         view.showLoading()
 
-        OrderBusiness().getOrders()
+        disposable.add(OrderBusiness().getOrders()
                 .rx({
                     orders = it
 
@@ -25,6 +26,7 @@ class OrderHistoryPresenter(val view: OrderHistoryContract.View) : OrderHistoryC
                 }, {
                     view.hideLoading()
                 })
+        )
     }
 
     override fun filterOrderHistory(text: String) {

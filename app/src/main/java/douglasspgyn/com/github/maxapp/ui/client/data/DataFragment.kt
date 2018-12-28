@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.ServiceConnection
 import android.os.Bundle
 import android.os.IBinder
-import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
@@ -16,13 +15,14 @@ import douglasspgyn.com.github.maxapp.common.extension.*
 import douglasspgyn.com.github.maxapp.common.service.DateTimeListener
 import douglasspgyn.com.github.maxapp.common.service.DateTimeService
 import douglasspgyn.com.github.maxapp.model.Cliente
+import douglasspgyn.com.github.maxapp.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_data.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DataFragment : Fragment(), DataContract.View, ServiceConnection {
+class DataFragment : BaseFragment<DataPresenter>(), DataContract.View, ServiceConnection {
 
-    private val presenter: DataPresenter = DataPresenter(this)
+    override fun viewPresenter(): DataPresenter = DataPresenter(this)
     private var dateTimeListener: DateTimeListener? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

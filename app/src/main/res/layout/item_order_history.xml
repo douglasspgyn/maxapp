@@ -49,7 +49,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:text="15:18" />
+                    android:text="15:18"
+                    android:textColor="#95989A" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -78,7 +79,8 @@
                     android:id="@+id/orderStatus"
                     android:layout_width="125dp"
                     android:layout_height="wrap_content"
-                    android:text="Em processamento" />
+                    android:text="Em processamento"
+                    android:textColor="#000000" />
 
                 <LinearLayout
                     android:id="@+id/orderReviewContainer"
@@ -92,7 +94,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Crítica:" />
+                        android:text="Crítica:"
+                        android:textColor="#95989A" />
 
                     <ImageView
                         android:id="@+id/orderReviewIcon"
@@ -106,7 +109,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:text="R$ 617,40" />
+                    android:text="R$ 617,40"
+                    android:textColor="#000000" />
             </RelativeLayout>
         </LinearLayout>
 

@@ -8,7 +8,7 @@ data class PedidoNetworkModel(
         @SerializedName("numero_ped_erp") val numeroPedidoErp: String,
         val codigoCliente: String,
         @SerializedName("NOMECLIENTE") val nomeDoCliente: String,
-        val data: Date,
+        val datetime: Date,
         val status: String,
         val critica: String?,
         val tipo: String,

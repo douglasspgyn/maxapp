@@ -8,7 +8,7 @@ fun PedidoNetworkModel.toModel(): Pedido {
             this.numeroPedidoErp,
             this.codigoCliente,
             this.nomeDoCliente,
-            this.data,
+            this.datetime,
             this.status,
             this.critica ?: "",
             this.tipo,

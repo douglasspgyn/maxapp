@@ -7,7 +7,7 @@ data class Pedido(
         val numeroPedidoErp: String,
         val codigoCliente: String,
         val nomeDoCliente: String,
-        val data: Date,
+        val datetime: Date,
         val status: String,
         val critica: String,
         val tipo: String,

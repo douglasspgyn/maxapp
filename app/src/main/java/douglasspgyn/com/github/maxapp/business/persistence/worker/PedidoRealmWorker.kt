@@ -17,7 +17,7 @@ class PedidoRealmWorker {
 
     fun savePedido(order: Pedido) {
         realmInstance.executeTransaction {
-            it.insert(order.toPersistenceModel())
+            it.insertOrUpdate(order.toPersistenceModel())
         }
     }
 

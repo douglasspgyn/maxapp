@@ -25,15 +25,25 @@
                 android:layout_marginBottom="8dp"
                 android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:drawableTop="@drawable/ic_maxima_pessoas"
-                    android:fontFamily="@font/santral_bold"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="@string/clients"
-                    android:textColor="#232323" />
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/ic_maxima_pessoas" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/santral_bold"
+                        android:text="@string/clients"
+                        android:textColor="#232323"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -45,15 +55,25 @@
                 android:layout_marginBottom="8dp"
                 android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:drawableTop="@drawable/ic_maxima_pedido"
-                    android:fontFamily="@font/santral_bold"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="@string/orders"
-                    android:textColor="#232323" />
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/ic_maxima_pedido" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/santral_bold"
+                        android:text="@string/orders"
+                        android:textColor="#232323"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
         </LinearLayout>
 
@@ -70,15 +90,25 @@
                 android:layout_marginBottom="8dp"
                 android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:drawableTop="@drawable/ic_maxima_resumo_vendas"
-                    android:fontFamily="@font/santral_bold"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="@string/sales_summary"
-                    android:textColor="#232323" />
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/ic_maxima_resumo_vendas" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/santral_bold"
+                        android:text="@string/sales_summary"
+                        android:textColor="#232323"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -90,15 +120,25 @@
                 android:layout_marginBottom="8dp"
                 android:layout_weight="1">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:drawableTop="@drawable/ic_maxima_ferramentas"
-                    android:fontFamily="@font/santral_bold"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="@string/tools"
-                    android:textColor="#232323" />
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/ic_maxima_ferramentas" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/santral_bold"
+                        android:text="@string/tools"
+                        android:textColor="#232323"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </android.support.v7.widget.CardView>
         </LinearLayout>
     </LinearLayout>

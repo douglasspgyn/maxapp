@@ -5,4 +5,5 @@
     <color name="colorAccent">#64863B</color>
 
     <color name="darkBlue">#053F6A</color>
+    <color name="screenBackgroundColor">#F1F1F1</color>
 </resources>

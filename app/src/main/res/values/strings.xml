@@ -31,6 +31,8 @@
     <string name="not_informed">Não informado</string>
 
     <string name="verify_client_status">Verificar status do cliente</string>
+    <string name="client_status_active">%1$s - Status ativo</string>
+    <string name="client_status_inactive">%1$s - Status inativo</string>
 
     <string name="search">Pesquisar</string>
     <string name="subtitles">Legendas</string>

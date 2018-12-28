@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import douglasspgyn.com.github.maxapp.R
 import douglasspgyn.com.github.maxapp.common.extension.isNetworkConnected
+import douglasspgyn.com.github.maxapp.common.service.DateTimeService
 import douglasspgyn.com.github.maxapp.ui.client.ClientActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -29,6 +30,8 @@ class MainActivity : AppCompatActivity() {
         tools.setOnClickListener {
 
         }
+
+        startService(Intent(this, DateTimeService::class.java))
     }
 
     override fun onResume() {

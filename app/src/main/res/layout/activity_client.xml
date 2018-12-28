@@ -6,11 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.client.ClientActivity">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottomNavigation" />
+        android:layout_above="@id/bottomNavigation">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.design.widget.CoordinatorLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNavigation"

@@ -58,6 +58,14 @@
                 android:id="@+id/contactType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/santral_medium"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/contactHobbie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:fontFamily="@font/santral_medium"
                 android:gravity="center_vertical" />
         </LinearLayout>

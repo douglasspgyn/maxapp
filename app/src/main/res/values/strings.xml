@@ -14,6 +14,7 @@
 
     <string name="client_data">Dados do cliente</string>
     <string name="client_id_social_name">%1$d - %2$s</string>
+    <string name="client_cpf">CPF: %1$s</string>
     <string name="client_cnpj">CNPJ: %1$s</string>
     <string name="client_industry">Ramo de atividade: %1$s</string>
     <string name="client_address">Endereço: %1$s</string>
@@ -23,6 +24,7 @@
     <string name="contact_cellphone">Celular: %1$s</string>
     <string name="contact_partner">Cônjuge: %1$s</string>
     <string name="contact_type">Tipo: %1$s</string>
+    <string name="contact_hobbie">Hobbie: %1$s</string>
     <string name="contact_email">E-mail: %1$s</string>
     <string name="contact_borndate">Data Nasc.: %1$s</string>
     <string name="contact_partner_borndate">Data Nasc. Cônjuge: %1$s</string>
@@ -39,6 +41,7 @@
 
     <string name="order_number_rca_erp">Nº Ped. RCA/ERP: %1$d / %2$s</string>
     <string name="order_client">Cliente: %1$s - %2$s</string>
+    <string name="order_value">R$ %1$.2f</string>
 
     <string name="nothing_found">Nada foi encontrado</string>
     <string name="error_load_content">Erro ao carregar o conteúdo\nTente novamente</string>

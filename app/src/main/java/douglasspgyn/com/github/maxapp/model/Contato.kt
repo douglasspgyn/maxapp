@@ -6,6 +6,7 @@ data class Contato(
         val celular: String,
         val conjuge: String,
         val tipo: String,
+        val hobbie: String,
         val time: String,
         val email: String,
         val dataDeNascimento: String,

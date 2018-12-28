@@ -9,6 +9,7 @@ fun ContatoNetworkModel.toModel(): Contato {
             this.celular,
             this.conjuge,
             this.tipo,
+            this.hobbie ?: "",
             this.time,
             this.email,
             this.dataDeNascimento,

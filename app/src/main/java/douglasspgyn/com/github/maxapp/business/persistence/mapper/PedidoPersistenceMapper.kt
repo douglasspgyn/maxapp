@@ -6,15 +6,16 @@ import io.realm.RealmList
 
 fun PedidoPersistenceModel.toModel(): Pedido {
     return Pedido(
-        this.numeroPedidoRca,
-        this.numeroPedidoErp,
-        this.codigoCliente,
-        this.nomeDoCliente,
+            this.numeroPedidoRca,
+            this.numeroPedidoErp,
+            this.codigoCliente,
+            this.nomeDoCliente,
             this.datetime,
-        this.status,
-        this.critica,
-        this.tipo,
-        this.legendas.toList()
+            this.valor,
+            this.status,
+            this.critica,
+            this.tipo,
+            this.legendas.toList()
     )
 }
 
@@ -27,15 +28,16 @@ fun Pedido.toPersistenceModel(): PedidoPersistenceModel {
     realmList.addAll(this.legendas)
 
     return PedidoPersistenceModel(
-        this.numeroPedidoRca,
-        this.numeroPedidoErp,
-        this.codigoCliente,
-        this.nomeDoCliente,
+            this.numeroPedidoRca,
+            this.numeroPedidoErp,
+            this.codigoCliente,
+            this.nomeDoCliente,
             this.datetime,
-        this.status,
-        this.critica,
-        this.tipo,
-        realmList
+            this.valor,
+            this.status,
+            this.critica,
+            this.tipo,
+            realmList
     )
 }
 

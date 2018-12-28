@@ -8,6 +8,7 @@ data class Pedido(
         val codigoCliente: String,
         val nomeDoCliente: String,
         val datetime: Date,
+        val valor: Float,
         val status: String,
         val critica: String,
         val tipo: String,

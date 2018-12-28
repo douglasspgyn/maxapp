@@ -9,6 +9,7 @@ open class ClientePersistenceModel(
         var codigo: String = "",
         var razaoSocial: String = "",
         var nomeFantasia: String = "",
+        var cpf: String = "",
         var cnpj: String = "",
         var ramoDeAtividade: String = "",
         var endereco: String = "",

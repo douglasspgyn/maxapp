@@ -32,6 +32,7 @@ class OrderHistoryAdapter(private val orders: List<Pedido>) : RecyclerView.Adapt
                 orderClient.text = context.getString(R.string.order_client, order.codigoCliente, order.nomeDoCliente).formSpanColor(8)
                 orderStatus.text = order.status
                 orderDateTime.text = getDateTimeFormated(order.datetime)
+                orderValue.text = context.getString(R.string.order_value, order.valor)
 
                 if (order.critica.isEmpty()) {
                     orderReviewContainer.gone()

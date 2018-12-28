@@ -5,6 +5,7 @@ data class Cliente(
         val codigo: String,
         val razaoSocial: String,
         val nomeFantasia: String,
+        val cpf: String,
         val cnpj: String,
         val ramoDeAtividade: String,
         val endereco: String,

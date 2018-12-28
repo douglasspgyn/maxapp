@@ -7,6 +7,7 @@ data class ClienteNetworkModel(
         val codigo: String,
         @SerializedName("razao_social") val razaoSocial: String,
         val nomeFantasia: String,
+        val cpf: String?,
         val cnpj: String,
         @SerializedName("ramo_atividade") val ramoDeAtividade: String,
         val endereco: String,

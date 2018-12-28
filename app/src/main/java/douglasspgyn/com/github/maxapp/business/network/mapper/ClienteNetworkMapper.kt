@@ -9,6 +9,7 @@ fun ClienteNetworkModel.toModel(): Cliente {
             this.codigo,
             this.razaoSocial,
             this.nomeFantasia,
+            this.cpf ?: "",
             this.cnpj,
             this.ramoDeAtividade,
             this.endereco,

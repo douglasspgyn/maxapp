@@ -11,6 +11,7 @@ open class PedidoPersistenceModel(
         var codigoCliente: String = "",
         var nomeDoCliente: String = "",
         var datetime: Date = Date(),
+        var valor: Float = 0f,
         var status: String = "",
         var critica: String = "",
         var tipo: String = "",

@@ -9,6 +9,7 @@ data class PedidoNetworkModel(
         val codigoCliente: String,
         @SerializedName("NOMECLIENTE") val nomeDoCliente: String,
         @SerializedName("data") val datetime: Date,
+        val valor: Float,
         val status: String,
         val critica: String?,
         val tipo: String,

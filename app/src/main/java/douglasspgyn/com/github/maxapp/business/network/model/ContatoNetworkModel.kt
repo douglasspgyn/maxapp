@@ -8,6 +8,7 @@ data class ContatoNetworkModel(
         val celular: String,
         val conjuge: String,
         val tipo: String,
+        val hobbie: String?,
         val time: String,
         @SerializedName("e_mail") val email: String,
         @SerializedName("data_nascimento") val dataDeNascimento: String,

@@ -12,10 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import douglasspgyn.com.github.maxapp.R
 import douglasspgyn.com.github.maxapp.common.adapter.ContactAdapter
-import douglasspgyn.com.github.maxapp.common.extension.formSpanColor
-import douglasspgyn.com.github.maxapp.common.extension.gone
-import douglasspgyn.com.github.maxapp.common.extension.snackbar
-import douglasspgyn.com.github.maxapp.common.extension.visible
+import douglasspgyn.com.github.maxapp.common.extension.*
 import douglasspgyn.com.github.maxapp.common.service.DateTimeListener
 import douglasspgyn.com.github.maxapp.common.service.DateTimeService
 import douglasspgyn.com.github.maxapp.model.Cliente
@@ -64,6 +61,7 @@ class DataFragment : Fragment(), DataContract.View, ServiceConnection {
     private fun populateClientView(client: Cliente) {
         clientIdAndSocialName.text = getString(R.string.client_id_social_name, client.id, client.razaoSocial)
         clientFantasyName.text = client.nomeFantasia
+        clientCPF.text = getString(R.string.client_cpf, client.cpf.formValidateNotInformedField(context!!)).formSpanColor(4)
         clientCNPJ.text = getString(R.string.client_cnpj, client.cnpj).formSpanColor(5)
         clientIndustry.text = getString(R.string.client_industry, client.ramoDeAtividade).formSpanColor(18)
         clientAddress.text = getString(R.string.client_address, client.endereco).formSpanColor(9)
@@ -71,6 +69,7 @@ class DataFragment : Fragment(), DataContract.View, ServiceConnection {
         contactRecyclerView.let {
             it.layoutManager = LinearLayoutManager(context)
             it.adapter = ContactAdapter(client.contatos)
+            it.isNestedScrollingEnabled = false
         }
 
         verifyClientStatus.setOnClickListener {

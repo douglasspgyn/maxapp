@@ -9,6 +9,7 @@ open class ContatoPersistenceModel(
         @PrimaryKey var celular: String = "",
         var conjuge: String = "",
         var tipo: String = "",
+        var hobbie: String = "",
         var time: String = "",
         var email: String = "",
         var dataDeNascimento: String = "",

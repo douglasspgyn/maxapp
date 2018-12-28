@@ -1,13 +1,10 @@
 package douglasspgyn.com.github.maxapp.common.adapter
 
-import android.graphics.Color
 import android.support.v7.widget.RecyclerView
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.view.ViewGroup
 import douglasspgyn.com.github.maxapp.R
+import douglasspgyn.com.github.maxapp.common.extension.formSpanColor
 import douglasspgyn.com.github.maxapp.common.extension.gone
 import douglasspgyn.com.github.maxapp.common.extension.inflate
 import douglasspgyn.com.github.maxapp.common.extension.visible
@@ -31,8 +28,8 @@ class OrderHistoryAdapter(private val orders: List<Pedido>) : RecyclerView.Adapt
     class OrderHistoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(order: Pedido) {
             with(itemView) {
-                orderNumberRcaAndErp.text = span(context.getString(R.string.order_number_rca_erp, order.numeroPedidoRca, order.numeroPedidoErp), 16)
-                orderClient.text = span(context.getString(R.string.order_client, order.codigoCliente, order.nomeDoCliente), 8)
+                orderNumberRcaAndErp.text = context.getString(R.string.order_number_rca_erp, order.numeroPedidoRca, order.numeroPedidoErp).formSpanColor(16)
+                orderClient.text = context.getString(R.string.order_client, order.codigoCliente, order.nomeDoCliente).formSpanColor(8)
                 orderStatus.text = order.status
                 orderDateTime.text = getDateTimeFormated(order.datetime)
 
@@ -48,13 +45,6 @@ class OrderHistoryAdapter(private val orders: List<Pedido>) : RecyclerView.Adapt
                     orderSubtitle.visible()
                 }
             }
-        }
-
-        private fun span(text: String, colorChangePosition: Int): Spannable {
-            val spannable: Spannable = SpannableString(text)
-            spannable.setSpan(ForegroundColorSpan(Color.parseColor("#95989A")), 0, colorChangePosition, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-            spannable.setSpan(ForegroundColorSpan(Color.parseColor("#000000")), colorChangePosition, text.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-            return spannable
         }
 
         private fun getDateTimeFormated(date: Date): String {

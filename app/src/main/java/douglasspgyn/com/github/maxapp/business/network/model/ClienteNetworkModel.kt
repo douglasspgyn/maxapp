@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class ClienteNetworkModel(
         val id: Long,
-        val codigo: Long,
+        val codigo: String,
         @SerializedName("razao_social") val razaoSocial: String,
         val nomeFantasia: String,
         val cnpj: String,

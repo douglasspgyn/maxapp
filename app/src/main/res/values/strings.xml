@@ -13,7 +13,23 @@
     <string name="license">Alvarás</string>
 
     <string name="client_data">Dados do cliente</string>
+    <string name="client_id_social_name">%1$d - %2$s</string>
+    <string name="client_cnpj">CNPJ: %1$s</string>
+    <string name="client_industry">Ramo de atividade: %1$s</string>
+    <string name="client_address">Endereço: %1$s</string>
+
     <string name="contacts">Contatos</string>
+    <string name="contact_phone">Telefone: %1$s</string>
+    <string name="contact_cellphone">Celular: %1$s</string>
+    <string name="contact_partner">Cônjuge: %1$s</string>
+    <string name="contact_type">Tipo: %1$s</string>
+    <string name="contact_email">E-mail: %1$s</string>
+    <string name="contact_borndate">Data Nasc.: %1$s</string>
+    <string name="contact_partner_borndate">Data Nasc. Cônjuge: %1$s</string>
+    <string name="contact_team">Time: %1$s</string>
+
+    <string name="not_informed">Não informado</string>
+
     <string name="verify_client_status">Verificar status do cliente</string>
 
     <string name="search">Pesquisar</string>
@@ -24,7 +40,6 @@
 
     <string name="nothing_found">Nada foi encontrado</string>
     <string name="error_load_content">Erro ao carregar o conteúdo\nTente novamente</string>
-    <!--<string name=""></string>-->
 
     <string name="order_state_on_erp">Status do pedido no ERP</string>
     <string name="in_processing_by_fv">Em processamento por parte do FV</string>

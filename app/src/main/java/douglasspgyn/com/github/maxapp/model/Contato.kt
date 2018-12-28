@@ -9,5 +9,5 @@ data class Contato(
         val time: String,
         val email: String,
         val dataDeNascimento: String,
-        val dataNascimentoConjuge: String?
+        val dataNascimentoConjuge: String
 )

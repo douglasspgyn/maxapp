@@ -36,6 +36,10 @@ class DataFragment : BaseFragment<DataPresenter>(), DataContract.View, ServiceCo
 
         activity?.bindService(Intent(context, DateTimeService::class.java), this, 0)
 
+        tryAgain.setOnClickListener {
+            presenter.getClient()
+        }
+
         presenter.getClient()
     }
 

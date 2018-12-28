@@ -31,15 +31,32 @@
         android:textColor="#3E3E3E"
         android:visibility="gone" />
 
-    <TextView
+    <LinearLayout
         android:id="@+id/errorView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:drawableTop="@drawable/ic_error_outline_dark_gray"
-        android:fontFamily="@font/santral_medium"
         android:gravity="center"
-        android:text="@string/error_load_content"
-        android:textColor="#3E3E3E"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_error_outline_dark_gray"
+            android:fontFamily="@font/santral_medium"
+            android:gravity="center"
+            android:text="@string/error_load_content"
+            android:textColor="#3E3E3E" />
+
+        <Button
+            android:id="@+id/tryAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_green"
+            android:padding="8dp"
+            android:text="@string/try_again"
+            android:textColor="#FFF" />
+    </LinearLayout>
 </RelativeLayout>

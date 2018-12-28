@@ -42,6 +42,10 @@ class OrderHistoryFragment : BaseFragment<OrderHistoryPresenter>(), OrderHistory
             presenter.getOrderHistory(false)
         }
 
+        tryAgain.setOnClickListener {
+            presenter.getOrderHistory()
+        }
+
         presenter.getOrderHistory()
     }
 

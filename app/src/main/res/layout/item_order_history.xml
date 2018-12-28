@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/typeIconContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -11,11 +11,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp">
 
-        <ImageView
+        <ViewStub
+            android:id="@+id/stub"
             android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:background="#CCC" />
-    </LinearLayout>
+            android:layout_height="36dp" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -131,7 +131,7 @@
 
                 <TextView
                     android:id="@+id/orderStatus"
-                    android:layout_width="130dp"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/santral_medium"
                     android:gravity="center_vertical"
@@ -158,8 +158,7 @@
                         android:id="@+id/orderReviewIcon"
                         android:layout_width="16dp"
                         android:layout_height="16dp"
-                        android:layout_marginStart="4dp"
-                        android:background="#CCC" />
+                        android:layout_marginStart="4dp" />
                 </LinearLayout>
 
                 <TextView

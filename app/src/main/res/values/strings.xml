@@ -49,7 +49,7 @@
     <string name="order_state_on_erp">Status do pedido no ERP</string>
     <string name="in_processing_by_fv">Em processamento por parte do FV</string>
     <string name="refused_by_erp">Pedido recusado pelo ERP</string>
-    <string name="pendent_on_erp">Posição no ERP Pendente</string>
+    <string name="pending_on_erp">Posição no ERP Pendente</string>
     <string name="blocked_on_erp">Posição no ERP Bloqueado</string>
     <string name="released_on_erp">Posição no ERP Liberado</string>
     <string name="mounted_on_erp">Posição no ERP Montado</string>

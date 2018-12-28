@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.SearchView
 import android.view.*
+import android.view.inputmethod.EditorInfo
 import douglasspgyn.com.github.maxapp.R
 import douglasspgyn.com.github.maxapp.common.adapter.OrderHistoryAdapter
 import douglasspgyn.com.github.maxapp.common.extension.gone
@@ -51,6 +52,7 @@ class OrderHistoryFragment : Fragment(), OrderHistoryContract.View,
 
         searchView?.setSearchableInfo(searchManager.getSearchableInfo(activity?.componentName))
         searchView?.setOnQueryTextListener(this)
+        searchView?.imeOptions = EditorInfo.IME_ACTION_SEARCH
         searchItem?.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
             override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
                 return true

@@ -32,18 +32,16 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <ImageView
+            <include
+                layout="@layout/erp_status_processing"
                 android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/circle"
-                android:backgroundTint="#95989A"
-                android:padding="4dp"
-                android:src="@drawable/ic_maxima_em_processamento" />
+                android:layout_height="24dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/in_processing_by_fv" />
         </LinearLayout>
 
@@ -54,19 +52,16 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
+            <include
+                layout="@layout/erp_status_refused"
                 android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/circle"
-                android:backgroundTint="#FF9900"
-                android:gravity="center"
-                android:text="!"
-                android:textColor="#FFF" />
+                android:layout_height="24dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/refused_by_erp" />
         </LinearLayout>
 
@@ -77,20 +72,17 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
+            <include
+                layout="@layout/erp_status_pending"
                 android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/circle"
-                android:backgroundTint="#757575"
-                android:gravity="center"
-                android:text="P"
-                android:textColor="#FFF" />
+                android:layout_height="24dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/pendent_on_erp" />
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
+                android:text="@string/pending_on_erp" />
         </LinearLayout>
 
         <LinearLayout
@@ -100,19 +92,16 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
+            <include
+                layout="@layout/erp_status_blocked"
                 android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/circle"
-                android:backgroundTint="#3557AA"
-                android:gravity="center"
-                android:text="B"
-                android:textColor="#FFF" />
+                android:layout_height="24dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/blocked_on_erp" />
         </LinearLayout>
 
@@ -123,19 +112,16 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
+            <include
+                layout="@layout/erp_status_released"
                 android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/circle"
-                android:backgroundTint="#186096"
-                android:gravity="center"
-                android:text="L"
-                android:textColor="#FFF" />
+                android:layout_height="24dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/released_on_erp" />
         </LinearLayout>
 
@@ -146,19 +132,16 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
+            <include
+                layout="@layout/erp_status_mounted"
                 android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/circle"
-                android:backgroundTint="#7FAA33"
-                android:gravity="center"
-                android:text="M"
-                android:textColor="#FFF" />
+                android:layout_height="24dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/mounted_on_erp" />
         </LinearLayout>
 
@@ -169,19 +152,16 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
+            <include
+                layout="@layout/erp_status_billed"
                 android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/circle"
-                android:backgroundTint="#64863B"
-                android:gravity="center"
-                android:text="F"
-                android:textColor="#FFF" />
+                android:layout_height="24dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/billed_on_erp" />
         </LinearLayout>
 
@@ -192,19 +172,16 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
+            <include
+                layout="@layout/erp_status_canceled"
                 android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/circle"
-                android:backgroundTint="#E40613"
-                android:gravity="center"
-                android:text="C"
-                android:textColor="#FFF" />
+                android:layout_height="24dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/canceled_on_erp" />
         </LinearLayout>
 
@@ -215,19 +192,16 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
+            <include
+                layout="@layout/erp_status_budget"
                 android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/circle"
-                android:backgroundTint="#2D3E4E"
-                android:gravity="center"
-                android:text="O"
-                android:textColor="#FFF" />
+                android:layout_height="24dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/budget" />
         </LinearLayout>
 
@@ -249,12 +223,13 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
                 android:src="@drawable/ic_maxima_aguardando_critica" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/waiting_erp" />
         </LinearLayout>
 
@@ -268,12 +243,13 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
                 android:src="@drawable/ic_maxima_critica_sucesso" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/success" />
         </LinearLayout>
 
@@ -287,12 +263,13 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
                 android:src="@drawable/ic_maxima_critica_alerta" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/partial_failure" />
         </LinearLayout>
 
@@ -303,19 +280,16 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <TextView
+            <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginEnd="4dp"
-                android:background="@drawable/circle"
-                android:backgroundTint="#E40613"
-                android:gravity="center"
-                android:text="!"
-                android:textColor="#FFF" />
+                android:src="@drawable/ic_maxima_critica_falha" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/santral_medium"
                 android:text="@string/total_failure" />
         </LinearLayout>
 
@@ -333,7 +307,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:drawableStart="@drawable/ic_maxima_legenda_corte"
-            android:drawablePadding="4dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/santral_medium"
             android:text="@string/order_was_cutted" />
 
         <TextView
@@ -341,7 +316,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:drawableStart="@drawable/ic_maxima_legenda_falta"
-            android:drawablePadding="4dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/santral_medium"
             android:text="@string/order_missing" />
 
         <TextView
@@ -349,7 +325,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:drawableStart="@drawable/ic_maxima_legenda_cancelamento"
-            android:drawablePadding="4dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/santral_medium"
             android:text="@string/order_canceled_on_erp" />
 
         <TextView
@@ -357,7 +334,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:drawableStart="@drawable/ic_maxima_legenda_devolucao"
-            android:drawablePadding="4dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/santral_medium"
             android:text="@string/order_with_return" />
 
         <TextView
@@ -365,7 +343,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
             android:drawableStart="@drawable/ic_maxima_legenda_telemarketing"
-            android:drawablePadding="4dp"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/santral_medium"
             android:text="@string/order_from_telemarketing" />
     </LinearLayout>
 </ScrollView>

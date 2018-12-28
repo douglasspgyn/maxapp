@@ -2,6 +2,7 @@ package douglasspgyn.com.github.maxapp.ui.client
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import douglasspgyn.com.github.maxapp.R
@@ -22,8 +23,9 @@ class ClientActivity : AppCompatActivity(), BottomNavigationView.OnNavigationIte
         bottomNavigation.selectedItemId = R.id.menuData
     }
 
-    override fun onNavigationItemSelected(menu: MenuItem): Boolean {
+    private var previousFragment: Fragment? = null
 
+    override fun onNavigationItemSelected(menu: MenuItem): Boolean {
         val fragment = when (menu.itemId) {
             R.id.menuData -> {
                 DataFragment()
@@ -37,7 +39,18 @@ class ClientActivity : AppCompatActivity(), BottomNavigationView.OnNavigationIte
             else -> DataFragment()
         }
 
-        supportFragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit()
+        previousFragment?.let {
+            supportFragmentManager.beginTransaction().hide(it).commit()
+        }
+
+        previousFragment = supportFragmentManager.findFragmentByTag(menu.itemId.toString())?.let {
+            supportFragmentManager.beginTransaction().show(it).commit()
+            it
+        } ?: let {
+            supportFragmentManager.beginTransaction().add(R.id.frameLayout, fragment, menu.itemId.toString()).commit()
+            fragment
+        }
+
         return true
     }
 

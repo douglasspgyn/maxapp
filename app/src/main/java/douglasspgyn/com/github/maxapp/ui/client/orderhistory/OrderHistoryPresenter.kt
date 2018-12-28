@@ -9,8 +9,10 @@ class OrderHistoryPresenter(val view: OrderHistoryContract.View) : OrderHistoryC
 
     private var orders: List<Pedido> = mutableListOf()
 
-    override fun getOrderHistory() {
-        view.showLoading()
+    override fun getOrderHistory(showLoading: Boolean) {
+        if (showLoading) {
+            view.showLoading()
+        }
 
         disposable.add(OrderBusiness().getOrders()
                 .rx({
@@ -25,6 +27,7 @@ class OrderHistoryPresenter(val view: OrderHistoryContract.View) : OrderHistoryC
                     view.orderHistoryFailed(it)
                 }, {
                     view.hideLoading()
+                    view.hideSwipeRefreshLoading()
                 })
         )
     }

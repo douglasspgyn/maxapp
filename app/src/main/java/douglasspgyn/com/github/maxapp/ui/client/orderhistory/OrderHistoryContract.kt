@@ -7,6 +7,7 @@ interface OrderHistoryContract {
     interface View {
         fun showLoading()
         fun hideLoading()
+        fun hideSwipeRefreshLoading()
 
         fun orderHistoryLoaded(orders: List<Pedido>)
         fun orderHistoryLoadedEmpty()
@@ -17,7 +18,7 @@ interface OrderHistoryContract {
     }
 
     interface Presenter {
-        fun getOrderHistory()
+        fun getOrderHistory(showLoading: Boolean = true)
         fun filterOrderHistory(text: String)
         fun removeOrderHistoryFilters()
     }

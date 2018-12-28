@@ -30,11 +30,11 @@ class OrderHistoryFragment : BaseFragment<OrderHistoryPresenter>(), OrderHistory
 
         setHasOptionsMenu(true)
 
-        activity?.title = getString(R.string.order_history)
-    }
+        setToolbarTitle(getString(R.string.order_history))
 
-    override fun onResume() {
-        super.onResume()
+        swipeRefresh.setOnRefreshListener {
+            presenter.getOrderHistory(false)
+        }
 
         presenter.getOrderHistory()
     }
@@ -103,6 +103,10 @@ class OrderHistoryFragment : BaseFragment<OrderHistoryPresenter>(), OrderHistory
 
     override fun hideLoading() {
         loading.gone()
+    }
+
+    override fun hideSwipeRefreshLoading() {
+        swipeRefresh.isRefreshing = false
     }
 
     override fun orderHistoryLoaded(orders: List<Pedido>) {

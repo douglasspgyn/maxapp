@@ -32,7 +32,7 @@ class DataFragment : BaseFragment<DataPresenter>(), DataContract.View, ServiceCo
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        activity?.title = getString(R.string.client_data)
+        setToolbarTitle(getString(R.string.client_data))
 
         activity?.bindService(Intent(context, DateTimeService::class.java), this, 0)
 

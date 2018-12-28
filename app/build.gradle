@@ -28,6 +28,8 @@ dependencies {
 
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "com.android.support.test:runner:$test_runner_version"
+    androidTestUtil "com.android.support.test:orchestrator:$test_orchestrator_version"
+    androidTestImplementation "com.android.support.test:rules:$test_rules_version"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espresso_core_version"
 
     implementation "com.android.support:appcompat-v7:$google_version"

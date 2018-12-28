@@ -6,6 +6,8 @@ buildscript {
 
         junit_version = '4.12'
         test_runner_version = '1.0.2'
+        test_orchestrator_version = '1.0.2'
+        test_rules_version = '1.0.2'
         espresso_core_version = '3.0.2'
 
         google_version = '28.0.0'

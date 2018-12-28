@@ -34,7 +34,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp">
 
                 <TextView
                     android:id="@+id/orderNumberRcaAndErp"
@@ -42,29 +43,43 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_toStartOf="@+id/orderDateTime"
-                    android:text="Nº Ped. RCA/ERP:  5.421.800.637 / 5.421.800.637" />
+                    android:fontFamily="@font/santral_medium"
+                    android:gravity="center_vertical" />
 
                 <TextView
                     android:id="@+id/orderDateTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:text="15:18"
+                    android:fontFamily="@font/santral_medium"
+                    android:gravity="center_vertical"
                     android:textColor="#95989A" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp">
 
                 <TextView
                     android:id="@+id/orderClient"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cliente:  848.246 - A F DA SILVA TUCUMA" />
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@+id/orderSubtitle1"
+                    android:fontFamily="@font/santral_medium"
+                    android:gravity="center_vertical" />
 
                 <ImageView
-                    android:id="@+id/orderSubtitle"
+                    android:id="@+id/orderSubtitle1"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toStartOf="@+id/orderSubtitle2"
+                    android:background="#CCC" />
+
+                <ImageView
+                    android:id="@+id/orderSubtitle2"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:layout_alignParentEnd="true"
@@ -79,7 +94,8 @@
                     android:id="@+id/orderStatus"
                     android:layout_width="125dp"
                     android:layout_height="wrap_content"
-                    android:text="Em processamento"
+                    android:fontFamily="@font/santral_medium"
+                    android:gravity="center_vertical"
                     android:textColor="#000000" />
 
                 <LinearLayout
@@ -94,13 +110,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Crítica:"
+                        android:fontFamily="@font/santral_medium"
+                        android:gravity="center_vertical"
+                        android:text="@string/review"
                         android:textColor="#95989A" />
 
                     <ImageView
                         android:id="@+id/orderReviewIcon"
                         android:layout_width="16dp"
                         android:layout_height="16dp"
+                        android:layout_marginStart="4dp"
                         android:background="#CCC" />
                 </LinearLayout>
 
@@ -109,6 +128,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/santral_medium"
+                    android:gravity="center_vertical"
                     android:text="R$ 617,40"
                     android:textColor="#000000" />
             </RelativeLayout>

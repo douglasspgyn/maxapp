@@ -40,9 +40,11 @@ class OrderHistoryAdapter(private val orders: List<Pedido>) : RecyclerView.Adapt
                 }
 
                 if (order.legendas.isEmpty()) {
-                    orderSubtitle.gone()
+                    orderSubtitle1.gone()
+                    orderSubtitle2.gone()
                 } else {
-                    orderSubtitle.visible()
+                    orderSubtitle1.visible()
+                    orderSubtitle2.visible()
                 }
             }
         }

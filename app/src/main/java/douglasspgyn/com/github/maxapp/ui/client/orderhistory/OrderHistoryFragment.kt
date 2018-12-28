@@ -51,6 +51,17 @@ class OrderHistoryFragment : Fragment(), OrderHistoryContract.View,
 
         searchView?.setSearchableInfo(searchManager.getSearchableInfo(activity?.componentName))
         searchView?.setOnQueryTextListener(this)
+        searchItem?.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
+            override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
+                return true
+            }
+
+            override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
+                presenter.removeOrderHistoryFilters()
+                return true
+            }
+
+        })
 
         super.onCreateOptionsMenu(menu, inflater)
     }
@@ -93,25 +104,40 @@ class OrderHistoryFragment : Fragment(), OrderHistoryContract.View,
     }
 
     override fun orderHistoryLoaded(orders: List<Pedido>) {
+        emptyView.gone()
+        errorView.gone()
         recyclerView.let {
             it.layoutManager = LinearLayoutManager(context)
             it.adapter = OrderHistoryAdapter(orders)
         }
+        recyclerView.visible()
     }
 
     override fun orderHistoryLoadedEmpty() {
-
+        recyclerView.gone()
+        errorView.gone()
+        emptyView.visible()
     }
 
     override fun orderHistoryFailed(e: Throwable) {
-
+        recyclerView.gone()
+        emptyView.gone()
+        errorView.visible()
     }
 
     override fun filteredOrderHistory(orders: List<Pedido>) {
-
+        emptyView.gone()
+        errorView.gone()
+        recyclerView.let {
+            it.layoutManager = LinearLayoutManager(context)
+            it.adapter = OrderHistoryAdapter(orders)
+        }
+        recyclerView.visible()
     }
 
     override fun filteredOrderHistoryEmpty() {
-
+        recyclerView.gone()
+        errorView.gone()
+        emptyView.visible()
     }
 }

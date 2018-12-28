@@ -19,5 +19,6 @@ interface OrderHistoryContract {
     interface Presenter {
         fun getOrderHistory()
         fun filterOrderHistory(text: String)
+        fun removeOrderHistoryFilters()
     }
 }

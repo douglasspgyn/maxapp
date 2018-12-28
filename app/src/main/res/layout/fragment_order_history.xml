@@ -13,4 +13,27 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/ic_history_dark_gray"
+        android:fontFamily="@font/santral_medium"
+        android:text="@string/nothing_found"
+        android:textColor="#3E3E3E"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/errorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/ic_error_outline_dark_gray"
+        android:fontFamily="@font/santral_medium"
+        android:gravity="center"
+        android:text="@string/error_load_content"
+        android:textColor="#3E3E3E"
+        android:visibility="gone" />
 </RelativeLayout>

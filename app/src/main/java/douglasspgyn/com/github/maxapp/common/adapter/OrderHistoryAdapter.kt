@@ -41,6 +41,12 @@ class OrderHistoryAdapter(private val orders: List<Pedido>) : RecyclerView.Adapt
                 } else {
                     orderReviewContainer.visible()
                 }
+
+                if (order.legendas.isEmpty()) {
+                    orderSubtitle.gone()
+                } else {
+                    orderSubtitle.visible()
+                }
             }
         }
 

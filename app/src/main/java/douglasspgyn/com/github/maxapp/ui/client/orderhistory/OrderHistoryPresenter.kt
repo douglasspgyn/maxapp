@@ -28,16 +28,16 @@ class OrderHistoryPresenter(val view: OrderHistoryContract.View) : OrderHistoryC
     }
 
     override fun filterOrderHistory(text: String) {
-        view.showLoading()
-
-        val filteredOrders = orders.filter { it.numeroPedidoRca.toString().startsWith(text, true) or it.numeroPedidoErp.startsWith(text, true) or it.nomeDoCliente.startsWith(text, true) or it.codigoCliente.startsWith(text, true) }
+        val filteredOrders = orders.filter { it.numeroPedidoRca.toString().contains(text, true) or it.numeroPedidoErp.contains(text, true) or it.nomeDoCliente.contains(text, true) or it.codigoCliente.contains(text, true) }
 
         if (filteredOrders.isEmpty()) {
             view.filteredOrderHistoryEmpty()
         } else {
             view.filteredOrderHistory(filteredOrders)
         }
+    }
 
-        view.hideLoading()
+    override fun removeOrderHistoryFilters() {
+        view.orderHistoryLoaded(orders)
     }
 }

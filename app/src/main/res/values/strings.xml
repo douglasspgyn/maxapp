@@ -21,6 +21,9 @@
 
     <string name="order_number_rca_erp">Nº Ped. RCA/ERP: %1$d / %2$s</string>
     <string name="order_client">Cliente: %1$s - %2$s</string>
+
+    <string name="nothing_found">Nada foi encontrado</string>
+    <string name="error_load_content">Erro ao carregar o conteúdo\nTente novamente</string>
     <!--<string name=""></string>-->
 
     <string name="order_state_on_erp">Status do pedido no ERP</string>

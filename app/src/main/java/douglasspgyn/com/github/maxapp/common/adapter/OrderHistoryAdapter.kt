@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
 import douglasspgyn.com.github.maxapp.R
+import douglasspgyn.com.github.maxapp.common.Constant
 import douglasspgyn.com.github.maxapp.common.extension.formSpanColor
 import douglasspgyn.com.github.maxapp.common.extension.gone
 import douglasspgyn.com.github.maxapp.common.extension.inflate
@@ -40,12 +41,20 @@ class OrderHistoryAdapter(private val orders: List<Pedido>) : RecyclerView.Adapt
                     orderReviewContainer.visible()
                 }
 
-                if (order.legendas.isEmpty()) {
-                    orderSubtitle1.gone()
-                    orderSubtitle2.gone()
-                } else {
-                    orderSubtitle1.visible()
-                    orderSubtitle2.visible()
+                orderSubtitleCutted.gone()
+                orderSubtitleMissing.gone()
+                orderSubtitleCanceled.gone()
+                orderSubtitleReturn.gone()
+                orderSubtitleTelemarketing.gone()
+
+                order.legendas.forEach {
+                    when (it) {
+                        Constant.ORDER_CUTTED -> orderSubtitleCutted.visible()
+                        Constant.ORDER_MISSING -> orderSubtitleMissing.visible()
+                        Constant.ORDER_CANCELED -> orderSubtitleCanceled.visible()
+                        Constant.ORDER_RETURN -> orderSubtitleReturn.visible()
+                        Constant.ORDER_BY_TELEMARKETING -> orderSubtitleTelemarketing.visible()
+                    }
                 }
             }
         }

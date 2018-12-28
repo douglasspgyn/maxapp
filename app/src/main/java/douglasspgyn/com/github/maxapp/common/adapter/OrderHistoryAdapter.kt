@@ -29,7 +29,7 @@ class OrderHistoryAdapter(private val orders: List<Pedido>) : RecyclerView.Adapt
     class OrderHistoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(order: Pedido) {
             with(itemView) {
-                stub.layoutResource = when (order.tipo) {
+                stub?.layoutResource = when (order.tipo) {
                     Constant.ERP_TYPE_PROCESSING -> R.layout.erp_status_processing
                     Constant.ERP_TYPE_REFUSED -> R.layout.erp_status_refused
                     Constant.ERP_TYPE_PENDING -> R.layout.erp_status_pending
@@ -41,7 +41,7 @@ class OrderHistoryAdapter(private val orders: List<Pedido>) : RecyclerView.Adapt
                     Constant.ERP_TYPE_BUDGET -> R.layout.erp_status_budget
                     else -> R.layout.erp_status_processing
                 }
-                stub.inflate()
+                stub?.inflate()
 
                 orderNumberRcaAndErp.text = context.getString(R.string.order_number_rca_erp, order.numeroPedidoRca, order.numeroPedidoErp).formSpanColor(16)
                 orderClient.text = context.getString(R.string.order_client, order.codigoCliente, order.nomeDoCliente).formSpanColor(8)

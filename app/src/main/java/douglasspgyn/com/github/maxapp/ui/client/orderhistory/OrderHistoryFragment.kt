@@ -11,13 +11,17 @@ import android.view.inputmethod.EditorInfo
 import douglasspgyn.com.github.maxapp.R
 import douglasspgyn.com.github.maxapp.common.adapter.OrderHistoryAdapter
 import douglasspgyn.com.github.maxapp.common.extension.gone
+import douglasspgyn.com.github.maxapp.common.extension.hideKeyboard
 import douglasspgyn.com.github.maxapp.common.extension.visible
 import douglasspgyn.com.github.maxapp.model.Pedido
 import douglasspgyn.com.github.maxapp.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_order_history.*
 
+
 class OrderHistoryFragment : BaseFragment<OrderHistoryPresenter>(), OrderHistoryContract.View,
         SearchView.OnQueryTextListener {
+
+    private var searchView: SearchView? = null
 
     override fun viewPresenter(): OrderHistoryPresenter = OrderHistoryPresenter(this)
 
@@ -33,6 +37,8 @@ class OrderHistoryFragment : BaseFragment<OrderHistoryPresenter>(), OrderHistory
         setToolbarTitle(getString(R.string.order_history))
 
         swipeRefresh.setOnRefreshListener {
+            searchView?.isIconified = true
+            hideKeyboard()
             presenter.getOrderHistory(false)
         }
 
@@ -44,7 +50,6 @@ class OrderHistoryFragment : BaseFragment<OrderHistoryPresenter>(), OrderHistory
 
         val searchItem = menu?.findItem(R.id.menuSearch)
         val searchManager = context?.getSystemService(Context.SEARCH_SERVICE) as SearchManager
-        var searchView: SearchView? = null
 
         searchItem?.let {
             searchView = it.actionView as SearchView

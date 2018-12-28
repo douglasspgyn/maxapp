@@ -14,3 +14,7 @@ fun Activity.snackbar(text: String, long: Boolean = false, dismissText: String? 
 private fun showSnackbar(text: String, length: Int, view: View, dismissText: String? = null) {
     Snackbar.make(view, text, length).setAction(dismissText) {}.show()
 }
+
+fun Activity.hideKeyboard() {
+    hideKeyboard(if (currentFocus == null) View(this) else currentFocus)
+}
